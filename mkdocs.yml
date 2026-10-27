@@ -45,7 +45,7 @@ theme:
 # Structure de navigation (le toctree)
 nav:
   - Accueil: index.md
-  - Histoire et Mathématiques: math_history.md
+  - Histoire et Mathématiques: Math_history.md
 
 # Extensions Markdown (Maths, notes de bas de page, attributs, coloration syntaxique avancée)
 markdown_extensions:
@@ -60,13 +60,13 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences:
-      custom_fases:
+      custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
   - admonition
   - def_list
-  - details
+  - pymdownx.details
   - tables
 
 # Plugins (Recherche et Bibliographie IEEE/APA)
