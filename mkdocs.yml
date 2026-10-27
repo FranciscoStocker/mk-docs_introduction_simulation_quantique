@@ -46,7 +46,7 @@ theme:
 nav:
   - Accueil: index.md
   - Histoire et Mathématiques: Math_history.md
-
+  - Les principes de la mécanique quantique: Quantum_principles.md
 # Extensions Markdown (Maths, notes de bas de page, attributs, coloration syntaxique avancée)
 markdown_extensions:
   - pymdownx.arithmatex:
