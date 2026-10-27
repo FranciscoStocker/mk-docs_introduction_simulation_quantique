@@ -1,1 +1,30 @@
-site_name: My Docs
+site_name: Introduction à la simulation quantique
+theme:
+  name: material
+  language: fr
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - attr_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - admonition
+  - def_list
+
+plugins:
+  - search
+  - bibtex:
+      bib_file: docs/referencias.bib
+      style: ieee
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js
