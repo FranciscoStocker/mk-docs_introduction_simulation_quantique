@@ -1,13 +1,53 @@
 site_name: Introduction à la simulation quantique
+site_description: Site de documentation académique et scientifique sur la physique quantique.
+site_author: Stocker Francisco
+
+repo_url: https://github.com/FranciscoStocker/mk-docs_introduction_simulation_quantique
+repo_name: mk-docs_introduction_simulation_quantique
+# Configuration du thème Material et de son design
 theme:
   name: material
   language: fr
-  features:
-    - navigation.instant
-    - navigation.tracking
-    - search.suggest
-    - search.highlight
+  palette:
+    # Mode clair
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Passer au mode sombre
+    # Mode sombre (idéal pour le code et les longues sessions de lecture)
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Passer au mode clair
 
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+  features:
+    - navigation.instant          # Navigation fluide sans rechargement complet de la page
+    - navigation.tracking         # Met à jour l'URL dans la barre d'adresse selon la section lue
+    - navigation.tabs             # Affiche le premier niveau de navigation sous forme d'onglets en haut
+    - navigation.sections         # Transforme les sections en catégories repliables
+    - navigation.expand           # Développe le menu par défaut pour plus de visibilité
+    - toc.integrate               # Intègre la table des matières de la page directement dans le menu de gauche
+    - search.suggest              # Suggestions de recherche en temps réel
+    - search.highlight            # Surlignage des mots recherchés
+    - content.code.copy           # Ajoute un bouton "copier" sur tous les blocs de code
+    - content.code.annotate       # Permet d'annoter les lignes de code
+
+# Structure de navigation (le toctree)
+nav:
+  - Accueil: index.md
+  - Histoire et Mathématiques: math_history.md
+
+# Extensions Markdown (Maths, notes de bas de page, attributs, coloration syntaxique avancée)
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
@@ -15,16 +55,28 @@ markdown_extensions:
   - attr_list
   - pymdownx.highlight:
       anchor_linenums: true
-  - pymdownx.superfences
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fases:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - admonition
   - def_list
+  - details
+  - tables
 
+# Plugins (Recherche et Bibliographie IEEE/APA)
 plugins:
   - search
   - bibtex:
       bib_file: docs/referencias.bib
       style: ieee
 
+# Configuration MathJax pour les équations LaTeX
 extra_javascript:
   - javascripts/mathjax.js
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js
