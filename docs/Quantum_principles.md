@@ -24,6 +24,10 @@ Niels Bohr propose en 1923 la relation de correspondance, permettant d'exprimer 
 
 - **Opérateur moment cinétique** ($\vec{L} = \vec{r} \times \vec{p}$): $$ \hat{L} : \psi(\vec{r},t)\to  -i\hbar  r  \nabla \psi(\vec{r},t) $$
 
+## 3) Principe de décomposition spectrale: 
+
+
+
 
 [^1]: Plus d'informations dans Ayouz, M., Gillet, J.-M., Janolin, P.-E., & Kokoouline, V. (2020). Les fondamentaux de la mécanique quantique sous Python : Rappel de cours et exercices d'application avec programmes inclus. Ellipses.
 
